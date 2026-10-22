@@ -1,0 +1,1160 @@
+/* =========================================================
+   LOGIN — HIDE BOTTOM NAV
+========================================================= */
+
+body.login-mode .app-bottom-nav {
+  display: none !important;
+}
+
+/* =========================================================
+   DUKAAN STOCK TRACKER
+   Responsive System
+========================================================= */
+
+
+/* =========================================================
+   LARGE DESKTOP
+   1200px+
+========================================================= */
+
+@media (min-width: 1200px) {
+
+  .app-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /*
+    Keep the dashboard compact instead of stretching
+    across the entire browser.
+  */
+
+  .dashboard-grid {
+    gap: 18px;
+  }
+
+  .stat-grid {
+    gap: 16px;
+  }
+
+  .quick-actions {
+    gap: 16px;
+  }
+
+  /*
+    Product cards can become a proper grid on desktop.
+  */
+
+  .product-grid {
+    display: grid;
+
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+
+    gap: 16px;
+  }
+
+  /*
+    Transaction history gets more breathing room.
+  */
+
+  .transaction-list {
+    gap: 10px;
+  }
+}
+
+
+/* =========================================================
+   DESKTOP
+   992px — 1199px
+========================================================= */
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+  .app-container {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .product-grid {
+    display: grid;
+
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 16px;
+  }
+
+  .dashboard-grid {
+    gap: 14px;
+  }
+
+  .stat-grid {
+    gap: 14px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   768px — 991px
+========================================================= */
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .app-container {
+    padding:
+      24px
+      20px
+      105px;
+  }
+
+  /*
+    Page header
+  */
+
+  .page-header {
+    align-items: center;
+  }
+
+  /*
+    Stats
+  */
+
+  .stat-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 14px;
+  }
+
+  /*
+    Dashboard sections
+  */
+
+  .dashboard-grid {
+    grid-template-columns:
+      repeat(6, minmax(0, 1fr));
+
+    gap: 14px;
+  }
+
+  .col-span-12 {
+    grid-column: span 6;
+  }
+
+  .col-span-8,
+  .col-span-6,
+  .col-span-4,
+  .col-span-3 {
+    grid-column: span 3;
+  }
+
+  /*
+    Product grid
+  */
+
+  .product-grid {
+    display: grid;
+
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 14px;
+  }
+
+  /*
+    Two column layouts become stacked
+    only when necessary.
+  */
+
+  .two-panel {
+    grid-template-columns:
+      minmax(0, 1.5fr)
+      minmax(240px, 1fr);
+
+    gap: 16px;
+  }
+
+  /*
+    Welcome card
+  */
+
+  .welcome-card {
+    padding: 24px;
+  }
+
+  /*
+    Filter
+  */
+
+  .filter-bar {
+    display: grid;
+
+    grid-template-columns:
+      minmax(0, 2fr)
+      minmax(160px, 1fr)
+      minmax(160px, 1fr);
+
+    gap: 10px;
+  }
+
+  .filter-bar > * {
+    min-width: 0;
+
+    flex: initial;
+  }
+}
+
+
+/* =========================================================
+   MOBILE LANDSCAPE
+   641px — 767px
+========================================================= */
+
+@media (min-width: 641px) and (max-width: 767px) {
+
+  .app-container {
+    padding:
+      20px
+      18px
+      105px;
+  }
+
+  .stat-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 12px;
+  }
+
+  .product-grid {
+    display: grid;
+
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 12px;
+  }
+
+  .dashboard-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 12px;
+  }
+
+  .col-span-12,
+  .col-span-8,
+  .col-span-6 {
+    grid-column: span 2;
+  }
+
+  .col-span-4,
+  .col-span-3 {
+    grid-column: span 1;
+  }
+
+  .filter-bar {
+    display: grid;
+
+    grid-template-columns:
+      1fr 1fr;
+
+    gap: 10px;
+  }
+
+  .filter-bar > * {
+    min-width: 0;
+
+    flex: initial;
+  }
+
+  .filter-bar > *:first-child {
+    grid-column: span 2;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   481px — 640px
+========================================================= */
+
+@media (min-width: 481px) and (max-width: 640px) {
+
+  .app-container {
+    padding:
+      20px
+      16px
+      100px;
+  }
+
+  /*
+    Header
+  */
+
+  .page-header {
+    align-items: flex-start;
+  }
+
+  .page-header-actions {
+    flex-shrink: 0;
+  }
+
+  /*
+    Dashboard
+  */
+
+  .dashboard-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+  }
+
+  .col-span-12,
+  .col-span-8,
+  .col-span-6,
+  .col-span-4,
+  .col-span-3 {
+    grid-column: span 2;
+  }
+
+  /*
+    Stats
+  */
+
+  .stat-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+  }
+
+  /*
+    Products
+  */
+
+  .product-grid {
+    display: grid;
+
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+  }
+
+  /*
+    Filters
+  */
+
+  .filter-bar {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 9px;
+  }
+
+  .filter-bar > * {
+    width: 100%;
+
+    flex: none;
+  }
+
+  /*
+    Quick actions
+  */
+
+  .quick-actions {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+  }
+
+  .quick-action {
+    min-height: 112px;
+
+    padding: 16px;
+  }
+
+  /*
+    Welcome
+  */
+
+  .welcome-card {
+    padding: 20px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   0 — 480px
+========================================================= */
+
+@media (max-width: 480px) {
+
+  /*
+    Main page
+  */
+
+  .app-container {
+    width: 100%;
+
+    padding:
+      18px
+      13px
+      94px;
+  }
+
+  .page {
+    gap: 18px;
+  }
+
+
+  /* -------------------------------------------------------
+     HEADER
+  ------------------------------------------------------- */
+
+  .page-header {
+    gap: 10px;
+
+    align-items: flex-start;
+  }
+
+  .page-header-content {
+    min-width: 0;
+  }
+
+  .page-header-content h1 {
+    font-size: 25px;
+
+    letter-spacing: -0.035em;
+  }
+
+  .page-header-content p {
+    font-size: 12px;
+  }
+
+
+  /* -------------------------------------------------------
+     HEADER ACTIONS
+  ------------------------------------------------------- */
+
+  .page-header-actions {
+    gap: 5px;
+  }
+
+  .theme-toggle {
+    width: 38px;
+    height: 38px;
+  }
+
+
+  /* -------------------------------------------------------
+     SECTIONS
+  ------------------------------------------------------- */
+
+  .section {
+    gap: 11px;
+  }
+
+  .section-header {
+    gap: 8px;
+  }
+
+  .section-title {
+    font-size: 16px;
+  }
+
+
+  /* -------------------------------------------------------
+     DASHBOARD
+  ------------------------------------------------------- */
+
+  .dashboard-grid {
+    display: grid;
+
+    grid-template-columns:
+      1fr;
+
+    gap: 10px;
+  }
+
+  .col-span-12,
+  .col-span-8,
+  .col-span-6,
+  .col-span-4,
+  .col-span-3 {
+    grid-column: span 1;
+  }
+
+
+  /* -------------------------------------------------------
+     STATS
+  ------------------------------------------------------- */
+
+  .stat-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 8px;
+  }
+
+  .stat-card {
+    min-height: 110px;
+
+    padding: 14px;
+
+    border-radius: 15px;
+  }
+
+  .stat-card-label {
+    font-size: 10px;
+  }
+
+  .stat-card-value {
+    margin-top: 8px;
+
+    font-size: 21px;
+  }
+
+  .stat-card-icon {
+    width: 32px;
+    height: 32px;
+
+    border-radius: 9px;
+
+    font-size: 14px;
+  }
+
+  .stat-card-footer {
+    margin-top: 7px;
+
+    font-size: 9px;
+  }
+
+
+  /* -------------------------------------------------------
+     WELCOME
+  ------------------------------------------------------- */
+
+  .welcome-card {
+    min-height: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 17px;
+
+    padding: 20px;
+
+    border-radius: 19px;
+  }
+
+  .welcome-eyebrow {
+    font-size: 11px;
+  }
+
+  .welcome-title {
+    font-size: 23px;
+  }
+
+  .welcome-description {
+    font-size: 12px;
+  }
+
+  .welcome-action {
+    width: 100%;
+  }
+
+  .welcome-action .btn {
+    width: 100%;
+  }
+
+
+  /* -------------------------------------------------------
+     QUICK ACTIONS
+  ------------------------------------------------------- */
+
+  .quick-actions {
+    grid-template-columns:
+      1fr 1fr;
+
+    gap: 8px;
+  }
+
+  .quick-action {
+    min-height: 112px;
+
+    padding: 14px;
+
+    border-radius: 15px;
+  }
+
+  .quick-action-icon {
+    width: 36px;
+    height: 36px;
+
+    border-radius: 10px;
+
+    font-size: 17px;
+  }
+
+  .quick-action-title {
+    font-size: 14px;
+  }
+
+  .quick-action-subtitle {
+    font-size: 10px;
+  }
+
+
+  /* -------------------------------------------------------
+     ACTION CARDS
+  ------------------------------------------------------- */
+
+  .action-card {
+    min-height: 112px;
+
+    padding: 15px;
+
+    border-radius: 15px;
+  }
+
+  .action-card-icon {
+    width: 36px;
+    height: 36px;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+  }
+
+  .action-card-title {
+    margin-top: 11px;
+
+    font-size: 14px;
+  }
+
+  .action-card-description {
+    font-size: 10px;
+  }
+
+
+  /* -------------------------------------------------------
+     PRODUCT GRID
+  ------------------------------------------------------- */
+
+  .product-grid {
+    display: grid;
+
+    grid-template-columns:
+      1fr;
+
+    gap: 9px;
+  }
+
+  .product-card {
+    padding: 14px;
+
+    border-radius: 15px;
+  }
+
+  .product-card-header {
+    gap: 8px;
+  }
+
+  .product-card-info {
+    gap: 9px;
+  }
+
+  .product-card-icon {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+  }
+
+  .product-card-name {
+    font-size: 14px;
+  }
+
+  .product-card-meta {
+    font-size: 10px;
+  }
+
+  .product-stock-label {
+    font-size: 9px;
+  }
+
+  .product-stock-value {
+    font-size: 17px;
+  }
+
+
+  /* -------------------------------------------------------
+     PRODUCT DETAILS
+  ------------------------------------------------------- */
+
+  .product-details {
+    gap: 6px;
+  }
+
+  .product-detail {
+    padding: 9px;
+
+    border-radius: 9px;
+  }
+
+  .product-detail-label {
+    font-size: 9px;
+  }
+
+  .product-detail-value {
+    font-size: 12px;
+  }
+
+
+  /* -------------------------------------------------------
+     PRODUCT ACTIONS
+  ------------------------------------------------------- */
+
+  .product-actions {
+    grid-template-columns:
+      1fr 1fr;
+
+    gap: 6px;
+  }
+
+  .product-actions .btn {
+    min-height: 38px;
+
+    padding: 7px 8px;
+
+    font-size: 11px;
+  }
+
+  .product-actions .btn:last-child {
+    grid-column: span 2;
+  }
+
+
+  /* -------------------------------------------------------
+     FILTER
+  ------------------------------------------------------- */
+
+  .filter-bar {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 8px;
+
+    padding: 10px;
+
+    border-radius: 15px;
+  }
+
+  .filter-bar > * {
+    width: 100%;
+
+    flex: none;
+  }
+
+  .search-bar input,
+  .filter-select {
+    min-height: 43px;
+
+    font-size: 13px;
+  }
+
+
+  /* -------------------------------------------------------
+     SEGMENTED CONTROL
+  ------------------------------------------------------- */
+
+  .segmented-control {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+      repeat(3, 1fr);
+  }
+
+  .segmented-control button {
+    width: 100%;
+
+    padding: 7px 8px;
+
+    font-size: 12px;
+  }
+
+
+  /* -------------------------------------------------------
+     TRANSACTION
+  ------------------------------------------------------- */
+
+  .transaction-card {
+    gap: 9px;
+
+    padding: 12px;
+
+    border-radius: 13px;
+  }
+
+  .transaction-icon {
+    width: 36px;
+    height: 36px;
+
+    border-radius: 10px;
+
+    font-size: 15px;
+  }
+
+  .transaction-title {
+    font-size: 12px;
+  }
+
+  .transaction-meta {
+    font-size: 10px;
+  }
+
+  .transaction-amount {
+    font-size: 12px;
+  }
+
+  .transaction-qty {
+    font-size: 9px;
+  }
+
+
+  /* -------------------------------------------------------
+     STOCK ALERT
+  ------------------------------------------------------- */
+
+  .stock-alert-card {
+    gap: 9px;
+
+    padding: 12px;
+
+    border-radius: 13px;
+  }
+
+  .stock-alert-icon {
+    width: 36px;
+    height: 36px;
+
+    border-radius: 10px;
+  }
+
+  .stock-alert-title {
+    font-size: 12px;
+  }
+
+  .stock-alert-subtitle {
+    font-size: 10px;
+  }
+
+  .stock-alert-value {
+    font-size: 12px;
+  }
+
+
+  /* -------------------------------------------------------
+     EMPTY STATE
+  ------------------------------------------------------- */
+
+  .modern-empty-state,
+  .empty-state {
+    min-height: 200px;
+
+    padding: 25px 15px;
+
+    border-radius: 15px;
+  }
+
+  .modern-empty-icon,
+  .empty-state-icon {
+    width: 50px;
+    height: 50px;
+
+    margin-bottom: 13px;
+
+    border-radius: 14px;
+
+    font-size: 21px;
+  }
+
+  .modern-empty-title,
+  .empty-state-title {
+    font-size: 15px;
+  }
+
+  .modern-empty-text,
+  .empty-state-text {
+    font-size: 11px;
+  }
+
+
+  /* -------------------------------------------------------
+     FORM
+  ------------------------------------------------------- */
+
+  .form-card {
+    padding: 15px;
+
+    border-radius: 16px;
+  }
+
+  .form-section {
+    padding-bottom: 18px;
+
+    margin-bottom: 18px;
+  }
+
+  .form-section-title {
+    font-size: 14px;
+  }
+
+  .form-section-description {
+    font-size: 11px;
+  }
+
+  .form-actions {
+    flex-direction: column-reverse;
+
+    align-items: stretch;
+  }
+
+  .form-actions .btn {
+    width: 100%;
+  }
+
+
+  /* -------------------------------------------------------
+     CONTENT CARD
+  ------------------------------------------------------- */
+
+  .content-card {
+    padding: 15px;
+
+    border-radius: 15px;
+  }
+
+  .large-card {
+    padding: 18px;
+  }
+
+
+  /* -------------------------------------------------------
+     SETUP ALERT
+  ------------------------------------------------------- */
+
+  .setup-alert {
+    align-items: flex-start;
+
+    padding: 11px 12px;
+
+    border-radius: 12px;
+
+    font-size: 11px;
+  }
+
+
+  /* -------------------------------------------------------
+     BOTTOM NAV
+  ------------------------------------------------------- */
+
+  .app-bottom-nav {
+    bottom: 9px;
+
+    width: calc(100% - 18px);
+
+    padding: 5px;
+
+    border-radius: 18px;
+  }
+
+  .app-bottom-nav .nav-item {
+    min-height: 53px;
+
+    border-radius: 13px;
+
+    font-size: 10px;
+  }
+
+  .app-bottom-nav .nav-icon {
+    width: 22px;
+    height: 22px;
+
+    font-size: 16px;
+  }
+
+
+  /* -------------------------------------------------------
+     MODAL
+  ------------------------------------------------------- */
+
+  .app-modal {
+    padding:
+      0
+      7px
+      7px;
+  }
+
+  .app-modal .sheet {
+    width: 100%;
+
+    max-height: calc(100vh - 7px);
+
+    padding: 18px;
+
+    border-radius:
+      20px
+      20px
+      13px
+      13px;
+  }
+
+
+  /* -------------------------------------------------------
+     TOAST
+  ------------------------------------------------------- */
+
+  .app-toast {
+    bottom: 80px;
+
+    max-width: calc(100% - 24px);
+
+    padding: 10px 13px;
+
+    font-size: 11px;
+  }
+}
+
+
+/* =========================================================
+   LANDSCAPE MOBILE
+========================================================= */
+
+@media (max-width: 767px) and (orientation: landscape) {
+
+  .app-container {
+    padding-bottom: 88px;
+  }
+
+  .app-bottom-nav {
+    bottom: 8px;
+  }
+
+  .welcome-card {
+    flex-direction: row;
+
+    align-items: center;
+  }
+
+  .welcome-action {
+    width: auto;
+  }
+
+  .welcome-action .btn {
+    width: auto;
+  }
+
+  .quick-actions {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .product-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* =========================================================
+   LOGIN BUTTON
+========================================================= */
+
+.login-submit-button {
+  width: 100% !important;
+  min-height: 52px !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  padding: 13px 20px !important;
+
+  border: 1px solid #07875f !important;
+  border-radius: 14px !important;
+
+  background: #07875f !important;
+  color: #ffffff !important;
+
+  font-size: 15px !important;
+  font-weight: 700 !important;
+
+  opacity: 1 !important;
+  visibility: visible !important;
+
+  cursor: pointer !important;
+
+  box-shadow: 0 8px 20px rgba(7, 135, 95, 0.18) !important;
+
+  transition:
+    transform 0.18s ease,
+    background 0.18s ease,
+    box-shadow 0.18s ease !important;
+}
+
+.login-submit-button:hover {
+  background: #067652 !important;
+  color: #ffffff !important;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 12px 26px rgba(7, 135, 95, 0.25) !important;
+}
+
+.login-submit-button:active {
+  transform: translateY(0);
+}
+
+.login-submit-button:disabled {
+  opacity: 0.7 !important;
+  cursor: not-allowed !important;
+}
